@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIBEROOM 🎧</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">VIBE<span>ROOM</span> ♡</a>
+        <p class="header-text">твоя музыка — твоё настроение</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">ТВОЁ МУЗЫКАЛЬНОЕ ПРОСТРАНСТВО</p>
+            <h1>feel the <span>vibe.</span></h1>
+            <p class="hero-text">найди песню под любое настроение</p>
+        </section>
+
+        <section class="music-section">
+            <div class="section-heading">
+                <h2>моя музыка <span>♫</span></h2>
+                <p>треки, которые чувствуются сердцем</p>
+            </div>
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="найти песню или исполнителя..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div id="songs" class="songs-grid"></div>
+            <p id="no-results" class="no-results" hidden>
+                ничего не нашлось :(
+            </p>
+        </section>
+
+        <section class="favorites-section">
+            <div class="section-heading">
+                <h2>избранное <span>♡</span></h2>
+                <p>самые любимые треки</p>
+            </div>
+
+            <div id="favorites" class="songs-grid"></div>
+            <p id="empty-favorites" class="empty-message">
+                тут пока пусто... добавь песню сердечком ♡
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>made with love ♡ VIBEROOM</p>
+    </footer>
+
+    <div id="music-player" class="music-player">
+        <div class="player-info">
+            <div id="player-emoji" class="player-emoji">🎧</div>
+            <div class="player-text">
+                <div id="player-title">выбери песню</div>
+                <div id="player-artist">viberoom</div>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <button id="prev-btn" aria-label="Предыдущая песня">⏮</button>
+            <button id="play-btn" aria-label="Воспроизвести">▶</button>
+            <button id="next-btn" aria-label="Следующая песня">⏭</button>
+        </div>
+
+        <div class="player-progress">
+            <span id="current-time">0:00</span>
+            <input
+                type="range"
+                id="progress"
+                min="0"
+                max="100"
+                value="0"
+                aria-label="Позиция воспроизведения"
+            >
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
